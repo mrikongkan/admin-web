@@ -114,7 +114,7 @@ date_default_timezone_set("Asia/Kolkata");
                 $payment = $row["payment"];
                 $super_payment = $row["super_pay"];
                 $admin_payment = $row["admin_pay"];
-                $expiry_date = $row["expiry_date"];
+                $expiry_date = strtotime($row["expiry_date"]);
                 $activated = $row["activated"];
                 //diff time stamp giving same time                    
                 // $timemodified1 = date("d F Y", $expiry_date);
@@ -124,9 +124,9 @@ date_default_timezone_set("Asia/Kolkata");
                 $ip_reg = date('Y-m-d H:i:s', strtotime($registration));
 
 
-                $ip_exp = date('Y-m-d H:i:s', strtotime($expiry_date));
-
-                $day_left = time();
+                $ip_exp = date('Y-m-d H:i:s', strtotime($expiry_date));                
+                
+                $day_left = strtotime(date('Y-m-d h:i:sa'));
                 $days = ceil(($expiry_date - $day_left) / 60 / 60 / 24);
 
                 if ($days <= 0) {
