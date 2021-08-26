@@ -202,14 +202,13 @@
             <td>Password</td>
             <td><input type="password" name="pass" class="password"></td>
           </tr>
-          <tr style="background-color:#FFF">
+          <!-- <tr style="background-color:#FFF">
             <td><img src="captcha.php" width="120" height="30" border="1" alt="CAPTCHA"></td>
             <td>
               <input type="text" size="6" maxlength="5" name="captcha" value=""><br>
               <small>copy the digits from the image into this box</small>
             </td>
-          </tr>
-          </tr>
+          </tr>          -->
           <tr style="background-color:#FFF">
             <td></td>
             <td><input type="submit" name="save" value="Login" class="submit"></td>

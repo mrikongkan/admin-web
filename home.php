@@ -114,7 +114,7 @@ date_default_timezone_set("Asia/Kolkata");
                 $payment = $row["payment"];
                 $super_payment = $row["super_pay"];
                 $admin_payment = $row["admin_pay"];
-                $expiry_date = strtotime($row["expiry_date"]);
+                $expiry_date = $row["expiry_date"];
                 $activated = $row["activated"];
                 //diff time stamp giving same time                    
                 // $timemodified1 = date("d F Y", $expiry_date);
