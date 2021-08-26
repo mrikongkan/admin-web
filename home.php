@@ -127,7 +127,7 @@ date_default_timezone_set("Asia/Kolkata");
                 $ip_exp = date('Y-m-d H:i:s', strtotime($expiry_date));                
                 
                 $day_left = strtotime(date('Y-m-d h:i:sa'));
-                $days = ceil(($expiry_date - $day_left) / 60 / 60 / 24);
+                $days = ceil((strtotime($expiry_date) - $day_left) / 60 / 60 / 24);
 
                 if ($days <= 0) {
                   $m = 'bgcolor="#FFFF00"';
